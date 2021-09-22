@@ -1,0 +1,38 @@
+type Query {
+
+    paynlTransaction (
+            pay_order_id: String @doc(description: "The order id provided by Pay. This is not the same as the order id in Magento.")
+    ) : PaynlTransactionOutput @resolver( class: "Paynl\\Graphql\\Model\\Resolver\\Transaction") @doc(description: "Get the status of the transaction")
+}
+
+type Mutation {
+
+    paynlStartTransaction (
+            order_id: String @doc(description: "Order Id")
+            return_url: String @doc(description: "Url to send the customer to once the payment has finished.")
+    ) : PaynlStartTransactionOutput @resolver( class: "Paynl\\Graphql\\Model\\Resolver\\StartTransaction") @doc(description: "Initialize the transaction.")
+
+    paynlFinishTransaction (
+            pay_order_id: String @doc(description: "The order id provided by Pay. This is not the same as the order id in Magento.")
+    ) : PaynlTransactionOutput @resolver( class: "Paynl\\Graphql\\Model\\Resolver\\FinishTransaction") @doc(description: "Initialize the transaction.")
+}
+
+type PaynlStartTransactionOutput {
+    redirectUrl  : String  @doc(description: "The url to redirect to the pay checkout")
+}
+
+type PaynlTransactionOutput {
+    orderId  : String  @doc(description: "The Pay order id")
+    state  : Int  @doc(description: "The State number")
+    stateName  : String  @doc(description: "The State name")
+    currency  : String  @doc(description: "The currency used to pay")
+    amount  : String  @doc(description: "The amount in cents")
+    currenyAmount  : String  @doc(description: "The amount in cents in the curency")
+    paidAmount  : String  @doc(description: "The paid amount in cents")
+    paidCurrenyAmount  : String  @doc(description: "The paid amount in cents in the curency")
+    refundAmount  : String  @doc(description: "The refunded amount in cents")
+    refundCurrenyAmount  : String  @doc(description: "The refunded amount in cents in the curency")
+    created  : String  @doc(description: "Created at date")
+    orderNumber  : String  @doc(description: "The Order increment id for the Magento order")
+    isSuccess  : Boolean  @doc(description: "Was the payment successfull")
+}

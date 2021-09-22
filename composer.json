@@ -1,0 +1,17 @@
+{
+    "name": "paynl/module-graphql",
+    "description": ".",
+    "type": "magento2-module",
+    "minimum-stability": "dev",
+    "require": {
+        "paynl/magento2-module": ">=2.3.0"
+    },
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Paynl\\Graphql\\": ""
+        }
+    }
+}
