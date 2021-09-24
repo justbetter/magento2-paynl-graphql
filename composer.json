@@ -4,7 +4,7 @@
     "type": "magento2-module",
     "minimum-stability": "dev",
     "require": {
-        "paynl/magento2-module": ">=2.3.0"
+        "paynl/magento2-plugin": ">=2.3.0"
     },
     "autoload": {
         "files": [
