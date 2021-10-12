@@ -2,7 +2,7 @@
 
 This module aims to add basic GraphQL support for the [paynl module for Magento 2](https://github.com/paynl/magento2-plugin)
 
-For proper functionality this will require the folowing [PR](https://github.com/paynl/magento2-plugin/pull/164)
+To use `return_url` you will need `paynl/magento2-plugin` version 2.4.0+
 
 ## Installation
 
