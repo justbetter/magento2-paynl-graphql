@@ -1,5 +1,5 @@
 {
-    "name": "indykoning/module-paynl-graphql",
+    "name": "justbetter/module-paynl-graphql",
     "description": ".",
     "type": "magento2-module",
     "minimum-stability": "dev",

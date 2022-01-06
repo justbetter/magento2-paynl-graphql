@@ -4,13 +4,6 @@ This module aims to add basic GraphQL support for the [paynl module for Magento 
 
 To use `return_url` you will need `paynl/magento2-plugin` version 2.4.0+
 
-## Installation
-
-To install this module you can run
-`composer require indykoning/module-paynl-graphql`
-
-To get the full functionality of setting the return url you should
-
 ## GraphQL
 
 These are the GraphQL queries this module adds.
